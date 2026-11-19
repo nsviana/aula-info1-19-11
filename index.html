@@ -54,8 +54,8 @@
     <div class="shell">
       <p class="eyebrow">Programação para Web · Atividade prática</p>
       <h1>Meu primeiro site com duas páginas</h1>
-      <p class="lead">Construa um pequeno site sobre um tema sorteado, utilizando HTML e links para navegar entre duas páginas.</p>
-      <div class="meta"><span>2 páginas HTML</span><span>Atividade individual</span><span>Sem id, class e div</span><span>Editor: PlayCode</span></div>
+      <p class="lead">Construa um pequeno site sobre um tema sorteado, utilizando HTML, CSS básico e links para navegar entre duas páginas.</p>
+      <div class="meta"><span>2 páginas HTML</span><span>Atividade individual</span><span>HTML + CSS</span><span>Editor: PlayCode</span></div>
     </div>
   </header>
 
@@ -69,20 +69,19 @@
     <section id="objetivo">
       <h2>1. Objetivo</h2>
       <p>Você desenvolverá um <strong>site simples, composto por duas páginas HTML</strong>, sobre um tema definido por sorteio. O visitante deverá conseguir acessar a segunda página a partir da primeira e também retornar à página inicial.</p>
-      <p>A atividade busca praticar a estrutura básica de documentos HTML, a organização do conteúdo e a criação de links entre arquivos do mesmo projeto.</p>
+      <p>A atividade busca praticar a estrutura de documentos HTML, a organização do conteúdo, o uso inicial de estilos CSS e a criação de links entre páginas.</p>
     </section>
 
     <section id="regras">
       <h2>2. Regras de desenvolvimento</h2>
       <ul>
         <li>Crie exatamente <strong>dois arquivos HTML</strong>: <code>index.html</code> e <code>detalhes.html</code>.</li>
-        <li>É <strong>proibido</strong> utilizar os atributos <code>id</code> e <code>class</code> e o elemento <code>&lt;div&gt;</code> nas páginas criadas pelos alunos.</li>
         <li>Use elementos HTML apropriados para organizar o conteúdo, como <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code> e <code>&lt;footer&gt;</code>.</li>
         <li>Utilize títulos, parágrafos, listas, imagens e links, de acordo com as exigências abaixo.</li>
-        <li>A navegação deve ser feita com a tag <code>&lt;a&gt;</code> e o atributo <code>href</code>, sem JavaScript.</li>
-        <li>Não utilize bibliotecas, frameworks ou código gerado por IA. O foco é praticar HTML manualmente.</li>
+        <li>Crie a navegação entre as páginas utilizando a tag <code>&lt;a&gt;</code> e o atributo <code>href</code>.</li>
+        <li>Personalize a aparência das duas páginas com CSS básico: <strong>cores de texto, cores de fundo, bordas e fontes</strong>.</li>
       </ul>
-      <div class="note"><strong>Sobre aparência:</strong> não é obrigatório aplicar CSS nesta atividade. A prioridade é ter uma estrutura HTML correta, conteúdo organizado e navegação funcional.</div>
+      <p>Escolha uma combinação simples de cores e mantenha uma aparência agradável e consistente entre as duas páginas.</p>
     </section>
 
     <section id="paginas">
@@ -96,7 +95,8 @@
             <li>Apresentação do tema em pelo menos <strong>dois parágrafos</strong>;</li>
             <li>Uma imagem relacionada ao tema, com atributo <code>alt</code>;</li>
             <li>Uma lista com pelo menos <strong>três itens</strong>;</li>
-            <li>Um link para <code>detalhes.html</code>.</li>
+            <li>Um link para <code>detalhes.html</code>;</li>
+            <li>Um título, fundo ou área de destaque com estilo CSS.</li>
           </ul>
         </article>
         <article class="panel">
@@ -107,11 +107,14 @@
             <li>Dois subtópicos com <code>&lt;h2&gt;</code>;</li>
             <li>Texto explicativo em cada subtópico;</li>
             <li>Uma lista ordenada com pelo menos <strong>três itens</strong>;</li>
-            <li>Um link para retornar a <code>index.html</code>.</li>
+            <li>Um link para retornar a <code>index.html</code>;</li>
+            <li>Estilos CSS em harmonia com a página inicial.</li>
           </ul>
         </article>
       </div>
       <p>As duas páginas devem conter a estrutura básica do HTML: <code>&lt;!DOCTYPE html&gt;</code>, <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>, <code>&lt;title&gt;</code> e <code>&lt;body&gt;</code>. Defina também o idioma da página e a codificação UTF-8.</p>
+      <h3>Um toque de CSS</h3>
+      <p>Experimente usar <code>color</code> para a cor do texto, <code>background-color</code> para o fundo, <code>border</code> para destacar elementos e <code>font-family</code> para definir a fonte. Pequenas alterações já fazem diferença!</p>
     </section>
 
     <section id="playcode">
@@ -122,6 +125,7 @@
         <li><strong>Prepare a página inicial:</strong> localize o arquivo <code>index.html</code> na lista de arquivos e substitua o conteúdo de exemplo pelo código da sua página inicial.</li>
         <li><strong>Crie a segunda página:</strong> na área de arquivos, use a opção de adicionar/criar arquivo (geralmente representada por <strong>+</strong> ou <strong>New File</strong>) e nomeie-o <code>detalhes.html</code>.</li>
         <li><strong>Escreva o conteúdo:</strong> edite o HTML de <code>detalhes.html</code>. Cada arquivo precisa ter seu próprio documento HTML completo.</li>
+        <li><strong>Adicione os estilos:</strong> use CSS no projeto para ajustar cores, fontes e bordas, observando as mudanças na prévia.</li>
         <li><strong>Configure a navegação:</strong> abra o menu do projeto, entre em <strong>Settings</strong> (Configurações) e, na seção <strong>General → Behavior</strong>, deixe a opção <strong>SPA mode</strong> <strong>desativada</strong>. Essa opção permite navegar entre arquivos HTML diferentes.</li>
         <li><strong>Crie os links:</strong> em <code>index.html</code>, use <code>href="detalhes.html"</code>; em <code>detalhes.html</code>, use <code>href="index.html"</code>.</li>
         <li><strong>Teste:</strong> utilize a visualização do site (Preview), clique no link para a segunda página e depois no link de volta. Verifique se o conteúdo muda corretamente.</li>
@@ -144,7 +148,18 @@
       <pre><code>&lt;nav&gt;
   &lt;a href="index.html"&gt;Voltar à página inicial&lt;/a&gt;
 &lt;/nav&gt;</code></pre>
-      <div class="note"><strong>Importante:</strong> os exemplos mostram somente os links. Você precisará criar toda a estrutura e os conteúdos das duas páginas por conta própria.</div>
+      <p>Para começar a estilizar o site, experimente estas regras CSS e personalize os valores:</p>
+      <pre><code>body {
+  background-color: #f4f7fb;
+  color: #243348;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  color: #2459a6;
+  border-bottom: 2px solid #2459a6;
+}</code></pre>
+      <p class="small">O exemplo é apenas um ponto de partida. Use suas próprias escolhas de cores e fontes.</p>
     </section>
 
     <section id="temas">
@@ -172,12 +187,12 @@
         <li>As duas páginas possuem documento HTML completo e títulos adequados.</li>
         <li>Incluí todos os textos, listas, imagem e subtópicos solicitados.</li>
         <li>Consigo ir da primeira página para a segunda e voltar.</li>
-        <li>Não usei <code>id</code>, <code>class</code> nem <code>&lt;div&gt;</code>.</li>
-        <li>Conferi o resultado na visualização do PlayCode.</li>
+        <li>Utilizei CSS para personalizar cores de texto, cores de fundo, bordas e fontes.</li>
+        <li>Conferi o resultado e a aparência das duas páginas na visualização do PlayCode.</li>
       </ul>
       <p><strong>Apresentação:</strong> demonstre ao professor as duas páginas funcionando, incluindo a navegação de ida e volta. Siga as orientações de entrega informadas em sala.</p>
     </section>
   </main>
-  <footer class="footer">Programação para Web · Atividade prática de HTML e navegação entre páginas</footer>
+  <footer class="footer">Programação para Web · Atividade prática de HTML, CSS e navegação entre páginas</footer>
 </body>
 </html>
