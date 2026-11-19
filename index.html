@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Atividade de Programação para Web: construção de um site com duas páginas HTML navegáveis.">
+  <title>Atividade | Meu primeiro site com duas páginas</title>
+  <style>
+    :root { color-scheme: light; --bg:#f5f7fb; --paper:#ffffff; --ink:#182338; --muted:#526078; --brand:#2156a5; --line:#dfe6f1; --pale:#eaf1ff; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.65 system-ui,-apple-system,"Segoe UI",sans-serif; }
+    .shell { max-width:980px; margin:auto; padding:0 22px; }
+    .hero { background:linear-gradient(115deg,#10274c,#2459a6); color:white; padding:58px 0 50px; }
+    .eyebrow { color:#bcd5ff; font-size:.79rem; text-transform:uppercase; letter-spacing:.13em; font-weight:800; }
+    h1 { font-size:clamp(2rem,5vw,3.2rem); line-height:1.14; letter-spacing:-.035em; margin:12px 0 16px; max-width:760px; }
+    .lead { font-size:1.1rem; color:#e3ecff; max-width:730px; margin:0; }
+    .meta { display:flex; gap:10px; flex-wrap:wrap; margin-top:26px; }
+    .meta span { border:1px solid #6888bf; padding:5px 12px; border-radius:30px; font-size:.86rem; }
+    .quicknav { background:white; border-bottom:1px solid var(--line); }
+    .quicknav nav { display:flex; flex-wrap:wrap; gap:6px 22px; padding:12px 0; }
+    .quicknav a { font-size:.91rem; font-weight:700; text-decoration:none; color:var(--brand); }
+    main { padding-top:30px!important; padding-bottom:52px!important; }
+    section { background:var(--paper); border:1px solid var(--line); border-radius:15px; padding:28px 31px; margin-bottom:20px; box-shadow:0 4px 12px rgba(20,41,73,.025); }
+    h2 { margin:0 0 13px; font-size:1.38rem; letter-spacing:-.02em; }
+    h3 { margin:23px 0 7px; font-size:1.05rem; }
+    p { margin:10px 0; }
+    ul,ol { padding-left:24px; margin:8px 0 14px; }
+    li { margin:7px 0; padding-left:3px; }
+    a { color:var(--brand); }
+    strong { font-weight:750; }
+    code { background:#edf2f8; color:#133d79; padding:2px 5px; border-radius:4px; font-size:.9em; }
+    pre { margin:12px 0 18px; background:#111e33; color:#eaf3ff; padding:17px 19px; border-radius:9px; overflow:auto; font-size:.89rem; line-height:1.7; }
+    pre code { background:none; color:inherit; padding:0; }
+    .note { padding:13px 16px; border-left:4px solid #3972bd; background:var(--pale); border-radius:0 9px 9px 0; margin:16px 0; }
+    .warning { padding:13px 16px; border-left:4px solid #b8792a; background:#fff5e9; border-radius:0 9px 9px 0; margin:16px 0; }
+    .two { display:grid; gap:15px; grid-template-columns:repeat(2,minmax(0,1fr)); margin:15px 0; }
+    .panel { background:#f8faff; border:1px solid var(--line); padding:17px 18px; border-radius:10px; }
+    .panel h3 { margin:0 0 8px; }
+    .tree { white-space:pre; }
+    .topics { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:9px 25px; padding-left:26px; }
+    .topics li { border-bottom:1px solid var(--line); padding:6px 4px 11px; margin:0; }
+    .small { font-size:.92rem; color:var(--muted); }
+    .checklist { list-style:none; padding:0; }
+    .checklist li { padding:9px 0 9px 30px; position:relative; border-bottom:1px solid var(--line); }
+    .checklist li::before { content:'□'; position:absolute; left:0; top:7px; color:#2459a6; font-size:1.35rem; }
+    .footer { text-align:center; padding:28px 15px 44px; color:var(--muted); font-size:.9rem; }
+    @media(max-width:640px) { .hero {padding:42px 0} .shell {padding-left:16px;padding-right:16px} section {padding:23px 19px} .two,.topics {grid-template-columns:1fr} }
+    @media print { body {background:white} .hero{background:white;color:black;padding:20px 0} .lead,.eyebrow{color:#333} .quicknav{display:none} section{break-inside:avoid;box-shadow:none} a{color:#123} }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="shell">
+      <p class="eyebrow">Programação para Web · Atividade prática</p>
+      <h1>Meu primeiro site com duas páginas</h1>
+      <p class="lead">Construa um pequeno site sobre um tema sorteado, utilizando HTML e links para navegar entre duas páginas.</p>
+      <div class="meta"><span>2 páginas HTML</span><span>Atividade individual</span><span>Sem id, class e div</span><span>Editor: PlayCode</span></div>
+    </div>
+  </header>
+
+  <div class="quicknav">
+    <nav class="shell" aria-label="Navegação da atividade">
+      <a href="#objetivo">Objetivo</a><a href="#regras">Regras</a><a href="#paginas">Páginas</a><a href="#playcode">Passo a passo</a><a href="#exemplo">Exemplo</a><a href="#temas">Temas</a><a href="#conferencia">Conferência</a>
+    </nav>
+  </div>
+
+  <main class="shell">
+    <section id="objetivo">
+      <h2>1. Objetivo</h2>
+      <p>Você desenvolverá um <strong>site simples, composto por duas páginas HTML</strong>, sobre um tema definido por sorteio. O visitante deverá conseguir acessar a segunda página a partir da primeira e também retornar à página inicial.</p>
+      <p>A atividade busca praticar a estrutura básica de documentos HTML, a organização do conteúdo e a criação de links entre arquivos do mesmo projeto.</p>
+    </section>
+
+    <section id="regras">
+      <h2>2. Regras de desenvolvimento</h2>
+      <ul>
+        <li>Crie exatamente <strong>dois arquivos HTML</strong>: <code>index.html</code> e <code>detalhes.html</code>.</li>
+        <li>É <strong>proibido</strong> utilizar os atributos <code>id</code> e <code>class</code> e o elemento <code>&lt;div&gt;</code> nas páginas criadas pelos alunos.</li>
+        <li>Use elementos HTML apropriados para organizar o conteúdo, como <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code> e <code>&lt;footer&gt;</code>.</li>
+        <li>Utilize títulos, parágrafos, listas, imagens e links, de acordo com as exigências abaixo.</li>
+        <li>A navegação deve ser feita com a tag <code>&lt;a&gt;</code> e o atributo <code>href</code>, sem JavaScript.</li>
+        <li>Não utilize bibliotecas, frameworks ou código gerado por IA. O foco é praticar HTML manualmente.</li>
+      </ul>
+      <div class="note"><strong>Sobre aparência:</strong> não é obrigatório aplicar CSS nesta atividade. A prioridade é ter uma estrutura HTML correta, conteúdo organizado e navegação funcional.</div>
+    </section>
+
+    <section id="paginas">
+      <h2>3. O que construir em cada página?</h2>
+      <div class="two">
+        <article class="panel">
+          <h3>Página 1 — <code>index.html</code></h3>
+          <p>Será a <strong>página inicial</strong> do site. Inclua:</p>
+          <ul>
+            <li>Nome do site e título principal com <code>&lt;h1&gt;</code>;</li>
+            <li>Apresentação do tema em pelo menos <strong>dois parágrafos</strong>;</li>
+            <li>Uma imagem relacionada ao tema, com atributo <code>alt</code>;</li>
+            <li>Uma lista com pelo menos <strong>três itens</strong>;</li>
+            <li>Um link para <code>detalhes.html</code>.</li>
+          </ul>
+        </article>
+        <article class="panel">
+          <h3>Página 2 — <code>detalhes.html</code></h3>
+          <p>Será uma página de <strong>aprofundamento</strong>. Inclua:</p>
+          <ul>
+            <li>Título principal com <code>&lt;h1&gt;</code>;</li>
+            <li>Dois subtópicos com <code>&lt;h2&gt;</code>;</li>
+            <li>Texto explicativo em cada subtópico;</li>
+            <li>Uma lista ordenada com pelo menos <strong>três itens</strong>;</li>
+            <li>Um link para retornar a <code>index.html</code>.</li>
+          </ul>
+        </article>
+      </div>
+      <p>As duas páginas devem conter a estrutura básica do HTML: <code>&lt;!DOCTYPE html&gt;</code>, <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>, <code>&lt;title&gt;</code> e <code>&lt;body&gt;</code>. Defina também o idioma da página e a codificação UTF-8.</p>
+    </section>
+
+    <section id="playcode">
+      <h2>4. Como usar o PlayCode — passo a passo</h2>
+      <p>Utilize o editor disponível em <a href="https://playcode.io/html-template" target="_blank" rel="noopener noreferrer">https://playcode.io/html-template</a>.</p>
+      <ol>
+        <li><strong>Abra o PlayCode:</strong> acesse o endereço acima e entre no editor HTML do projeto, sem recorrer à geração por IA.</li>
+        <li><strong>Prepare a página inicial:</strong> localize o arquivo <code>index.html</code> na lista de arquivos e substitua o conteúdo de exemplo pelo código da sua página inicial.</li>
+        <li><strong>Crie a segunda página:</strong> na área de arquivos, use a opção de adicionar/criar arquivo (geralmente representada por <strong>+</strong> ou <strong>New File</strong>) e nomeie-o <code>detalhes.html</code>.</li>
+        <li><strong>Escreva o conteúdo:</strong> edite o HTML de <code>detalhes.html</code>. Cada arquivo precisa ter seu próprio documento HTML completo.</li>
+        <li><strong>Configure a navegação:</strong> abra o menu do projeto, entre em <strong>Settings</strong> (Configurações) e, na seção <strong>General → Behavior</strong>, deixe a opção <strong>SPA mode</strong> <strong>desativada</strong>. Essa opção permite navegar entre arquivos HTML diferentes.</li>
+        <li><strong>Crie os links:</strong> em <code>index.html</code>, use <code>href="detalhes.html"</code>; em <code>detalhes.html</code>, use <code>href="index.html"</code>.</li>
+        <li><strong>Teste:</strong> utilize a visualização do site (Preview), clique no link para a segunda página e depois no link de volta. Verifique se o conteúdo muda corretamente.</li>
+      </ol>
+      <div class="warning"><strong>Atenção:</strong> os nomes dos arquivos precisam corresponder exatamente aos nomes usados nos links. Por exemplo, <code>detalhes.html</code> é diferente de <code>detalhe.html</code>. Mantenha os dois arquivos na mesma pasta.</div>
+      <p class="small">A interface do PlayCode pode mudar. Se algum botão tiver outro nome, procure a função equivalente de criar arquivo ou abrir configurações. Consulte também a <a href="https://playcode.io/help/spa-mode" target="_blank" rel="noopener noreferrer">orientação sobre o modo SPA</a>.</p>
+    </section>
+
+    <section id="exemplo">
+      <h2>5. Exemplo mínimo de navegação</h2>
+      <p>A estrutura esperada no projeto é:</p>
+      <pre><code class="tree">meu-site/
+├── index.html
+└── detalhes.html</code></pre>
+      <p>No arquivo <strong>index.html</strong>, inclua um link que leve à segunda página:</p>
+      <pre><code>&lt;nav&gt;
+  &lt;a href="detalhes.html"&gt;Conhecer mais sobre o tema&lt;/a&gt;
+&lt;/nav&gt;</code></pre>
+      <p>No arquivo <strong>detalhes.html</strong>, inclua um link de retorno:</p>
+      <pre><code>&lt;nav&gt;
+  &lt;a href="index.html"&gt;Voltar à página inicial&lt;/a&gt;
+&lt;/nav&gt;</code></pre>
+      <div class="note"><strong>Importante:</strong> os exemplos mostram somente os links. Você precisará criar toda a estrutura e os conteúdos das duas páginas por conta própria.</div>
+    </section>
+
+    <section id="temas">
+      <h2>6. Temas para sorteio</h2>
+      <p>Cada aluno desenvolverá seu site com base no tema sorteado. Você pode escolher os textos, imagens e subtópicos que façam sentido para o assunto.</p>
+      <ol class="topics">
+        <li><strong>Turismo local</strong> — pontos turísticos e passeios.</li>
+        <li><strong>Animais de estimação</strong> — cuidados e curiosidades.</li>
+        <li><strong>Jogos digitais</strong> — gêneros e jogos favoritos.</li>
+        <li><strong>Alimentação saudável</strong> — hábitos e sugestões.</li>
+        <li><strong>Esportes</strong> — modalidades e benefícios.</li>
+        <li><strong>Música</strong> — estilos e artistas.</li>
+        <li><strong>Cinema</strong> — gêneros e filmes.</li>
+        <li><strong>Meio ambiente</strong> — preservação e atitudes sustentáveis.</li>
+        <li><strong>Tecnologia no cotidiano</strong> — dispositivos e aplicações.</li>
+        <li><strong>Livros e leitura</strong> — gêneros e recomendações.</li>
+      </ol>
+    </section>
+
+    <section id="conferencia">
+      <h2>7. Checklist antes de concluir</h2>
+      <p>Antes de mostrar seu trabalho ao professor, confira:</p>
+      <ul class="checklist">
+        <li>Criei os arquivos <code>index.html</code> e <code>detalhes.html</code>.</li>
+        <li>As duas páginas possuem documento HTML completo e títulos adequados.</li>
+        <li>Incluí todos os textos, listas, imagem e subtópicos solicitados.</li>
+        <li>Consigo ir da primeira página para a segunda e voltar.</li>
+        <li>Não usei <code>id</code>, <code>class</code> nem <code>&lt;div&gt;</code>.</li>
+        <li>Conferi o resultado na visualização do PlayCode.</li>
+      </ul>
+      <p><strong>Apresentação:</strong> demonstre ao professor as duas páginas funcionando, incluindo a navegação de ida e volta. Siga as orientações de entrega informadas em sala.</p>
+    </section>
+  </main>
+  <footer class="footer">Programação para Web · Atividade prática de HTML e navegação entre páginas</footer>
+</body>
+</html>
